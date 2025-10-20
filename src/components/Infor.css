@@ -1,0 +1,99 @@
+.infor {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+    color: #333;
+}
+
+.infor-services {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fafbfc;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.service-item h4 {
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #111;
+}
+
+.service-item p {
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.infor-subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
+    flex-wrap: wrap;
+}
+
+.subscribe-text h4 {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #111;
+    margin-bottom: 6px;
+}
+
+.subscribe-text p {
+    font-size: 13px;
+    color: #666;
+    font-style: italic;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    min-width: 300px;
+}
+
+.email-input {
+    flex: 1;
+    padding: 13px 15px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 13px;
+    color: #333;
+}
+
+.subscribe-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 14px 25px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.subscribe-btn:hover {
+    background-color: #111;
+}
+
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 768px) {
+    .infor-services {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .infor-subscribe {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .subscribe-form {
+        width: 100%;
+    }
+}

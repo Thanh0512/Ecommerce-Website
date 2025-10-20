@@ -1,0 +1,110 @@
+.chat-toggle-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #0084ff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    font-size: 1.8rem;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.chat-toggle-button:hover {
+    transform: scale(1.05);
+}
+
+.chat-toggle-button.active {
+    background-color: #006aff;
+}
+
+.chat-popup {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #0084ff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    max-width: 80%;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    position: relative;
+}
+
+.bot-msg {
+    align-self: flex-start;
+    background-color: #e5e5ea;
+    color: #000;
+}
+
+.user-msg {
+    align-self: flex-end;
+    background-color: #0084ff;
+    color: white;
+}
+
+.message-time {
+    display: block;
+    font-size: 0.65rem;
+    color: #666;
+    margin-top: 3px;
+    text-align: right;
+}
+
+.chat-input-area {
+    display: flex;
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+.chat-input-area input {
+    flex-grow: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.chat-input-area button {
+    background: none;
+    border: none;
+    color: #0084ff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding-left: 10px;
+}

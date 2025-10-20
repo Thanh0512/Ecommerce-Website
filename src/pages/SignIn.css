@@ -1,0 +1,114 @@
+.signup-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.signup-container {
+    background-color: white;
+    padding: 50px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    z-index: 10;
+}
+
+.signup-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 15px 10px;
+    margin-bottom: 1px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 1rem;
+    outline: none;
+    transition: border-bottom 0.3s;
+}
+
+.signup-form input:focus {
+    border-bottom: 1px solid #777;
+}
+
+.signup-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #555555;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.signup-button:hover {
+    background-color: #333333;
+}
+
+.login-link {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.login-link span {
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.signup-image-decoration {
+    display: block;
+    position: absolute;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background-image: url('/public/banner1.jpg');
+    background-size: contain;
+    background-position: center;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .signup-image-decoration {
+        display: none;
+    }
+    .signup-container {
+        width: 90%;
+        max-width: 450px;
+        padding: 40px 25px;
+    }
+    .signup-title {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+    .signup-form input {
+        padding: 12px 8px;
+    }
+    .signup-button {
+        padding: 12px;
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,50 @@
+.shop-sidebar {
+    width: 100%;
+    background-color: #fff;
+    border-right: 1px solid #eee;
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.sidebar-section {
+    margin-bottom: 25px;
+}
+
+.sidebar-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #777;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.apple-title {
+    background-color: black;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.sidebar-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-section li {
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    padding: 6px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-section li:hover {
+    color: #f16e00;
+}
+
+.sidebar-section li.active {
+    color: #f16e00;
+    font-weight: 600;
+}

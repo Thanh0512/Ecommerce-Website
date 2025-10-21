@@ -6,7 +6,7 @@ import { formatPrice } from "../components/FormatPrice";
 import ProductItem from "../components/ProductItem";
 import Navbar from "../components/Navbar";
 import "./ProductDetail.css"; 
-
+import { useNavigate } from "react-router-dom";
 const API_URL =
   "https://firebasestorage.googleapis.com/v0/b/funix-subtitle.appspot.com/o/Boutique_products.json?alt=media&token=dc67a5ea-e3e0-479e-9eaf-5e01bcd09c74";
 
@@ -18,6 +18,7 @@ const ProductDetail = () => {
   const [error, setError] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   
  
   const showRelatedProducts = relatedProducts.length > 0;
@@ -151,7 +152,13 @@ const ProductDetail = () => {
               <h2>Related Product</h2>
               <div className="related-products-grid">
                 {relatedProducts.map((relatedProduct) => (
-                  <ProductItem key={relatedProduct._id.$oid} product={relatedProduct} />
+                  <div
+                    key={relatedProduct._id.$oid}
+                    onClick={() => navigate(`/detail/${relatedProduct._id.$oid}`)} 
+                    style={{ cursor: "pointer" }}
+                  >
+                    <ProductItem product={relatedProduct} />
+                  </div>
                 ))}
               </div>
             </div>

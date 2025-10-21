@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { formatPrice } from '../components/FormatPrice';
 import { useNavigate } from 'react-router-dom';
+import { CLEAR_CART } from '../store/actionTypes';
 import './CheckoutPage.css';
 const CheckoutPage = () => {
+const dispatch = useDispatch();
   const navigate = useNavigate();
   const cartList = useSelector(state => state.cart.listCart);
   const [billingDetails, setBillingDetails] = useState({
@@ -36,6 +39,8 @@ const CheckoutPage = () => {
         console.log('Thông tin đặt hàng:', billingDetails);
         console.log('Giỏ hàng:', cartList);
         alert('Đặt hàng thành công! Cảm ơn quý khách.');
+        dispatch({ type: CLEAR_CART });
+        navigate('/shop');
         };
         if (cartList.length === 0) {
          return (
